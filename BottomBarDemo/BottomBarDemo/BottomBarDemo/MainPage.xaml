@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bottombar:BottomBarPage
+    x:Class="BottomBarDemo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bottombar="clr-namespace:BottomBarDemo.BottomBar"
+    xmlns:views="clr-namespace:BottomBarDemo.Views;assembly=BottomBarDemo">
+
+    <views:FavoritesView
+        Title="Favorites"
+        bottombar:BottomBarPageExtensions.TabColor="#FF9800"
+        Icon="ic_tab_favourite.png" />
+
+    <views:ContactsView
+        Title="Contacts"
+        bottombar:BottomBarPageExtensions.BadgeColor="OrangeRed"
+        bottombar:BottomBarPageExtensions.BadgeCount="6"
+        bottombar:BottomBarPageExtensions.TabColor="Chocolate"
+        Icon="ic_tab_contacts.png" />
+
+    <views:CallsView
+        Title="Call"
+        bottombar:BottomBarPageExtensions.BadgeColor="MidnightBlue"
+        bottombar:BottomBarPageExtensions.BadgeCount="10"
+        bottombar:BottomBarPageExtensions.TabColor="DeepSkyBlue"
+        Icon="ic_tab_call.png" />
+
+    <views:FriendsView
+        Title="Friends"
+        bottombar:BottomBarPageExtensions.BadgeColor="DarkGreen"
+        bottombar:BottomBarPageExtensions.BadgeCount="1"
+        bottombar:BottomBarPageExtensions.TabColor="Gold"
+        Icon="ic_tab_contacts.png" />
+
+</bottombar:BottomBarPage>
