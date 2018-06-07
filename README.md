@@ -36,6 +36,23 @@ This project uses some third-party assets with a license that requires attributi
 
 - [Bottom Navigation Bar](https://github.com/pocheshire/BottomNavigationBar) : by Max Evtukh
 
+- [Permissions](https://github.com/jamesmontemagno/PermissionsPlugin) : by James Montemagno
+
+- [Media Plugin](https://github.com/jamesmontemagno/MediaPlugin) : by James Montemagno
+
+- [Image Circle](https://github.com/jamesmontemagno/MediaPlugin) : by James Montemagno
+
+- [Go To Settings](https://github.com/TrueGeek/Xamarin.Plugin.GoToSettings) : by Bradley Dean
+
+- [FFImageLoading ](https://github.com/luberda-molinet/FFImageLoading) : by Daniel Luberda
+
+- [Plugin Multilingual](https://github.com/CrossGeeks/MultilingualPlugin) : by Charlin Agramonte, Rendy Del Rosario
+
+- [MvvmLightLibsStd10](https://github.com/lbugnion/mvvmlight) : by Laurent Bugnion
+
+- [MediaManager](https://github.com/martijn00/XamarinMediaManager) : by martijn00, modplug, jmartine2, SimonSimCity, fela98
+bubavanhalen, rookiejava
+
 # Clean and Rebuild
 
 If you see build issues when pulling updates from the repo, try cleaning and rebuilding the solution.
