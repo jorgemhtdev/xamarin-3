@@ -1,0 +1,6 @@
+﻿"NSCameraUsageDescription" = "This app needs access to the camera to take photos";
+"NSPhotoLibraryUsageDescription" = "This app needs access to photos";
+"NSMicrophoneUsageDescription" = "This app needs access to microphone";
+"NSSupportsPurgeableLocalStorage" = "This app needs save documents";
+"NSPhotoLibraryAddUsageDescription" = "This app needs access to the photo gallery";
+"CFBundleDisplayName" = "DemoMedia";

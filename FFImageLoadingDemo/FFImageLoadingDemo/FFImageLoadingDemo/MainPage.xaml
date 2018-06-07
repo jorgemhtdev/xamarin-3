@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FFImageLoadingDemo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:local="clr-namespace:FFImageLoadingDemo"
+    xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label
+                FontSize="24"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="SVG Icons"
+                TextColor="Chocolate"
+                WidthRequest="50" />
+
+            <ffimageloadingsvg:SvgCachedImage
+                HeightRequest="100"
+                Source="resource://FFImageLoadingDemo.Resources.img.location.svg"
+                WidthRequest="100" />
+            <ffimageloadingsvg:SvgCachedImage
+                HeightRequest="100"
+                Source="resource://FFImageLoadingDemo.Resources.img.map.svg"
+                WidthRequest="100" />
+
+            <Label
+                FontSize="24"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Gif"
+                TextColor="Chocolate"
+                WidthRequest="50" />
+
+            <ffimageloadingsvg:SvgCachedImage
+                HeightRequest="100"
+                Source="resource://FFImageLoadingDemo.Resources.img.ffimage.gif"
+                WidthRequest="100" />
+
+
+            <Label
+                FontSize="24"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Sepia Transformation"
+                TextColor="Chocolate"
+                WidthRequest="50" />
+
+            <forms:CachedImage Source="resource://FFImageLoadingDemo.Resources.img.homer.jpg">
+                <forms:CachedImage.Transformations>
+                    <transformations:SepiaTransformation />
+                </forms:CachedImage.Transformations>
+            </forms:CachedImage>
+
+            <Label
+                FontSize="24"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Grayscale Transformation"
+                TextColor="Chocolate"
+                WidthRequest="50" />
+
+            <forms:CachedImage Source="resource://FFImageLoadingDemo.Resources.img.homer.jpg">
+                <forms:CachedImage.Transformations>
+                    <transformations:GrayscaleTransformation />
+                </forms:CachedImage.Transformations>
+            </forms:CachedImage>
+
+            <Label
+                FontSize="24"
+                HeightRequest="50"
+                HorizontalTextAlignment="Center"
+                Text="Blurred Transformation"
+                TextColor="Chocolate"
+                WidthRequest="50" />
+
+            <forms:CachedImage Source="resource://FFImageLoadingDemo.Resources.img.homer.jpg">
+                <forms:CachedImage.Transformations>
+                    <transformations:BlurredTransformation />
+                </forms:CachedImage.Transformations>
+            </forms:CachedImage>
+
+            <forms:CachedImage
+                CacheDuration="1"
+                DownsampleToViewSize="true"
+                HeightRequest="300"
+                HorizontalOptions="Center"
+                LoadingPlaceholder="https://loremflickr.com/cache/resized/784_40242646215_0a9ffec640_320_240_nofilter.jpg"
+                LoadingPriority="Low"
+                Source="https://loremflickr.com/cache/resized/4455_37213762694_66a7800b2a_320_240_nofilter.jpg"
+                VerticalOptions="Center"
+                WidthRequest="300" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

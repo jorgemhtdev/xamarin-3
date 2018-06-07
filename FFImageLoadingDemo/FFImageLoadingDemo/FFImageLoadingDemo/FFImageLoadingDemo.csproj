@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\img\ffimage.gif" />
+    <None Remove="Resources\img\homer.jpg" />
+    <None Remove="Resources\img\location.svg" />
+    <None Remove="Resources\img\map.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\img\ffimage.gif" />
+    <EmbeddedResource Include="Resources\img\homer.jpg" />
+    <EmbeddedResource Include="Resources\img\map.svg" />
+    <EmbeddedResource Include="Resources\img\location.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.1.823" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.1.823" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.1.823" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.550146" />
+  </ItemGroup>
+</Project>
