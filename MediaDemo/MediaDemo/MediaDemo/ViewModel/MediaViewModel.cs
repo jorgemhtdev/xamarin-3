@@ -284,26 +284,6 @@
                 {
                     GoToSettings.Go();
                 }
-
-
-                /*
-                switch (Device.RuntimePlatform)
-                {
-                    case Device.iOS:
-                        if (action)
-                        {
-                            Device.OpenUri(new Uri("app-settings:"));
-                        }
-                        break;
-                    case Device.Android:
-                        if (action)
-                        {
-                            GoToSettings.Go();
-                        }
-                        break;
-                    default:
-                        break;
-                }*/
             }
 
         }

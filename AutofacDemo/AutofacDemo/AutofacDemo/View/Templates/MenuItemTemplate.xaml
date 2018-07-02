@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="AutofacDemo.View.Templates.MenuItemTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuIconStyle" TargetType="Image">
+                <Setter Property="WidthRequest" Value="44" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="MenuTextStyle"
+                BasedOn="{StaticResource MontserratRegularLabelStyle}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BlueBlackColor}" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid Margin="35,25,0,0" ColumnSpacing="22">
+            <Grid.Triggers>
+                <DataTrigger
+                    Binding="{Binding IsEnabled, Mode=TwoWay}"
+                    TargetType="Grid"
+                    Value="False">
+                    <Setter Property="Opacity" Value="0.5" />
+                </DataTrigger>
+            </Grid.Triggers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Column="0"
+                Source="{Binding MenuItemType, Converter={StaticResource MenuItemTypeConverter}}"
+                Style="{StaticResource MenuIconStyle}" />
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource MenuTextStyle}"
+                Text="{Binding Title}" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="AutofacDemo.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:AutofacDemo.Converters;assembly=AutofacDemo"
+    xmlns:ctrls="clr-namespace:AutofacDemo.Controls;assembly=AutofacDemo">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--  COLORS https://color.adobe.com/Flat-UI-color-theme-2469224  -->
+            <Color x:Key="RedColor">#e44235</Color>
+            <Color x:Key="GrayColor">#e9eeef</Color>
+            <Color x:Key="BlueLightColor">#2d8dd6</Color>
+            <Color x:Key="BlueStrongColor">#2475b0</Color>
+            <Color x:Key="BlueBlackColor">#273646</Color>
+
+            <!--  CONVERTERS  -->
+            <converters:MenuItemTypeConverter x:Key="MenuItemTypeConverter" />
+
+            <!--  FONTS  -->
+            <OnPlatform x:Key="TextMeOneRegular" x:TypeArguments="x:String">
+                <On Platform="Android" Value="TextMeOne-Regular.ttf#TextMeOne-Regular" />
+                <On Platform="iOS" Value="TextMeOne-Regular" />
+            </OnPlatform>
+            <OnPlatform x:Key="MontserratRegular" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat-Regular" />
+                <On Platform="iOS" Value="Montserrat-Regular" />
+            </OnPlatform>
+            <OnPlatform x:Key="MontserratLight" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-Light.ttf#Montserrat-Light" />
+                <On Platform="iOS" Value="Montserrat-Light" />
+            </OnPlatform>
+            <OnPlatform x:Key="Montserrat-SemiBold" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold" />
+                <On Platform="iOS" Value="Montserrat-SemiBold" />
+            </OnPlatform>
+            <OnPlatform x:Key="Montserrat-Black" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-Black.ttf#Montserrat-Black" />
+                <On Platform="iOS" Value="Montserrat-Black" />
+            </OnPlatform>
+            <OnPlatform x:Key="Montserrat-Bold" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
+                <On Platform="iOS" Value="Montserrat-Bold" />
+            </OnPlatform>
+            <OnPlatform x:Key="Montserrat-Medium" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Montserrat-Medium.ttf#Montserrat-Medium" />
+                <On Platform="iOS" Value="Montserrat-Medium" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="LittleSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="12" />
+                <On Platform="iOS" Value="11" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="MidMediumSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="14" />
+                <On Platform="iOS" Value="12" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="MediumSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="16" />
+                <On Platform="iOS" Value="14" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="LargeSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="18" />
+                <On Platform="iOS" Value="16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="LargerSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="20" />
+                <On Platform="iOS" Value="18" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="BigSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="24" />
+                <On Platform="iOS" Value="20" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="ExtraBigSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="32" />
+                <On Platform="iOS" Value="24" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="HugeSize" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="48" />
+                <On Platform="iOS" Value="32" />
+            </OnPlatform>
+
+            <!--  STYLES  -->
+            <Style x:Key="BaseLabelStyle" TargetType="{x:Type Label}" />
+
+            <Style x:Key="BaseEntryStyle" TargetType="{x:Type ctrls:ExtendedEntry}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="HeightRequest" Value="44" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Opacity" Value="0.4" />
+                <Setter Property="FocusLineColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="InvalidLineColor" Value="{StaticResource RedColor}" />
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="Opacity" Value="1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style BasedOn="{StaticResource BaseEntryStyle}" TargetType="{x:Type ctrls:ExtendedEntry}" />
+
+            <Style TargetType="{x:Type ActivityIndicator}">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Color" Value="Yellow" />
+            </Style>
+
+
+            <Style
+                x:Key="MontserratRegularLabelStyle"
+                BasedOn="{StaticResource BaseLabelStyle}"
+                TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutofacDemo.View.MenuView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:AutofacDemo.Behaviors;assembly=AutofacDemo"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:templates="clr-namespace:AutofacDemo.View.Templates;assembly=AutofacDemo"
+    Title=" "
+    Icon="BurgerMenu">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="UsernamePanelStyle" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Vertical" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+
+            <Style
+                x:Key="HelloTextStyle"
+                BasedOn="{StaticResource MontserratRegularLabelStyle}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="FontSize" Value="{StaticResource ExtraBigSize}" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+
+            <Style
+                x:Key="UsernameTextStyle"
+                BasedOn="{StaticResource HelloTextStyle}"
+                TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource BigSize}" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="75*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <ffimageloading:CachedImage
+                    Aspect="AspectFill"
+                    CacheDuration="30"
+                    CacheType="Disk"
+                    Source="http://www.eluniversal.com.co/sites/default/files/dr_house.jpg" />
+                <Grid BackgroundColor="#293849" Opacity="0.5" />
+                <StackLayout
+                    Margin="25,0,0,10"
+                    Spacing="0"
+                    Style="{StaticResource UsernamePanelStyle}">
+                    <Label Style="{StaticResource HelloTextStyle}" Text="Hello" />
+                    <Label Style="{StaticResource UsernameTextStyle}" Text="{Binding UserName}" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ListView
+                    behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding MenuItemSelectedCommand}"
+                    BackgroundColor="{StaticResource GrayColor}"
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding MenuItems}"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <templates:MenuItemTemplate />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

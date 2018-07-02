@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutofacDemo.View.LoginView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ctrls="clr-namespace:AutofacDemo.Controls"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{StaticResource BlueBlackColor}"
+    NavigationPage.HasNavigationBar="false">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xamanimation:StoryBoard x:Key="LogoAnimation" Target="{x:Reference Logo}">
+                <xamanimation:TranslateToAnimation TranslateY="500" Duration="0" />
+                <xamanimation:TranslateToAnimation
+                    Easing="SpringOut"
+                    TranslateY="0"
+                    Duration="750" />
+            </xamanimation:StoryBoard>
+            <Style x:Key="LogoStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Source" Value="LoginLogo" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Triggers>
+        <EventTrigger Event="Appearing">
+            <xamanimation:BeginAnimation Animation="{StaticResource LogoAnimation}" />
+        </EventTrigger>
+    </ContentPage.Triggers>
+    <ContentPage.Content>
+        <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <Grid>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*" />
+                        <RowDefinition Height="4*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid
+                        Grid.Row="0"
+                        Margin="20,20,20,0"
+                        RowSpacing="0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="18" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="18" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Image x:Name="Logo" Style="{StaticResource LogoStyle}">
+                                <Image.HeightRequest>
+                                    <OnIdiom
+                                        x:TypeArguments="x:Double"
+                                        Phone="95"
+                                        Tablet="250" />
+                                </Image.HeightRequest>
+                                <Image.WidthRequest>
+                                    <OnIdiom
+                                        x:TypeArguments="x:Double"
+                                        Phone="95"
+                                        Tablet="250" />
+                                </Image.WidthRequest>
+                            </Image>
+                        </Grid>
+
+                        <Label
+                            Grid.Row="1"
+                            FontFamily="{StaticResource Montserrat-SemiBold}"
+                            FontSize="Small"
+                            Text="User Name"
+                            TextColor="{Binding Path=LineColorToApply, Source={Reference UsernameEntry}}" />
+
+                        <ctrls:ExtendedEntry
+                            x:Name="UsernameEntry"
+                            Grid.Row="2"
+                            FontFamily="{StaticResource Montserrat-Medium}"
+                            IsValid="{Binding UserName.IsValid, Mode=TwoWay}"
+                            Placeholder="username"
+                            Text="{Binding UserName.Value, Mode=TwoWay}" />
+
+                        <Label
+                            Grid.Row="4"
+                            FontFamily="{StaticResource Montserrat-SemiBold}"
+                            FontSize="Small"
+                            Text="Password"
+                            TextColor="{Binding Path=LineColorToApply, Source={Reference PasswordEntry}}" />
+
+                        <ctrls:ExtendedEntry
+                            x:Name="PasswordEntry"
+                            Grid.Row="5"
+                            FontFamily="{StaticResource Montserrat-Medium}"
+                            IsPassword="True"
+                            IsValid="{Binding Password.IsValid, Mode=TwoWay}"
+                            Placeholder="Password"
+                            Text="{Binding Password.Value, Mode=TwoWay}" />
+                    </Grid>
+
+                    <StackLayout
+                        x:Name="SignButtons"
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        Orientation="Vertical"
+                        Spacing="20"
+                        VerticalOptions="Center">
+                        <ctrls:ButtonFrame Padding="10">
+                            <ctrls:ButtonFrame.HorizontalOptions>
+                                <OnIdiom
+                                    x:TypeArguments="LayoutOptions"
+                                    Phone="Center"
+                                    Tablet="Center" />
+                            </ctrls:ButtonFrame.HorizontalOptions>
+                            <ctrls:ButtonFrame.WidthRequest>
+                                <OnIdiom
+                                    x:TypeArguments="x:Double"
+                                    Phone="250"
+                                    Tablet="520" />
+                            </ctrls:ButtonFrame.WidthRequest>
+                            <ctrls:ButtonFrame.HeightRequest>
+                                <OnIdiom
+                                    x:TypeArguments="x:Double"
+                                    Phone="50"
+                                    Tablet="60" />
+                            </ctrls:ButtonFrame.HeightRequest>
+                            <Button
+                                BackgroundColor="{StaticResource BlueStrongColor}"
+                                Command="{Binding SignInCommand}"
+                                FontFamily="{StaticResource Montserrat-Black}"
+                                FontSize="Medium"
+                                Text="Iniciar sesión"
+                                TextColor="{StaticResource GrayColor}" />
+                        </ctrls:ButtonFrame>
+
+                        <ctrls:ButtonFrame Padding="10">
+                            <ctrls:ButtonFrame.HorizontalOptions>
+                                <OnIdiom
+                                    x:TypeArguments="LayoutOptions"
+                                    Phone="Center"
+                                    Tablet="Center" />
+                            </ctrls:ButtonFrame.HorizontalOptions>
+                            <ctrls:ButtonFrame.WidthRequest>
+                                <OnIdiom
+                                    x:TypeArguments="x:Double"
+                                    Phone="250"
+                                    Tablet="520" />
+                            </ctrls:ButtonFrame.WidthRequest>
+                            <ctrls:ButtonFrame.HeightRequest>
+                                <OnIdiom
+                                    x:TypeArguments="x:Double"
+                                    Phone="50"
+                                    Tablet="60" />
+                            </ctrls:ButtonFrame.HeightRequest>
+                            <Button
+                                BackgroundColor="{StaticResource RedColor}"
+                                Command="{Binding SignInCommand}"
+                                FontFamily="{StaticResource Montserrat-Black}"
+                                FontSize="Medium"
+                                Text="Registrarse"
+                                TextColor="{StaticResource GrayColor}" />
+                        </ctrls:ButtonFrame>
+                    </StackLayout>
+                </Grid>
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
