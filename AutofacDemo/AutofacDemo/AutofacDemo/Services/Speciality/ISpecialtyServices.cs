@@ -6,6 +6,6 @@
 
     public interface ISpecialtyServices
     {
-      
+        Task<IEnumerable<SpecialityModel>> GetSpecialitiesAsync();
     }
 }

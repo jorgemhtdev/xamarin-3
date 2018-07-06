@@ -1,5 +1,6 @@
 ﻿namespace AutofacDemo.View
 {
+    using ViewModel;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
@@ -8,7 +9,10 @@
 	{
 		public SpecialityView ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+
+		    BindingContext = new SpecialityViewModel();
+
 		}
 	}
 }

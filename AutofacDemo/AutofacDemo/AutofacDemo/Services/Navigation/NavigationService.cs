@@ -103,9 +103,7 @@
             }
             else
             {
-                var navigationPage = CurrentApplication.MainPage as CustomNavigationPage;
-
-                if (navigationPage != null)
+                if (CurrentApplication.MainPage is CustomNavigationPage navigationPage)
                 {
                     await navigationPage.PushAsync(page);
                 }
@@ -149,7 +147,7 @@
             mappings.Add(typeof(LoginViewModel), typeof(LoginView));
             mappings.Add(typeof(MainViewModel), typeof(MainView));
             mappings.Add(typeof(HomeViewModel), typeof(HomeView));
-            mappings.Add(typeof(SpecialityViewModel), typeof(SpecialityView));
+            //mappings.Add(typeof(SpecialityViewModel), typeof(SpecialityView));
             mappings.Add(typeof(DoctorViewModel), typeof(DoctorView));
             mappings.Add(typeof(ExtendedSplashViewModel), typeof(ExtendedSplashView));
             mappings.Add(typeof(ProfileViewModel), typeof(ProfileView));

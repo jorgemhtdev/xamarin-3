@@ -3,6 +3,8 @@
     x:Class="AutofacDemo.View.SpecialityView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:AutofacDemo.Behaviors;assembly=AutofacDemo"
+    xmlns:view="clr-namespace:AutofacDemo.View.Templates"
     Title="Especialidad"
     BackgroundColor="{StaticResource BlueBlackColor}">
 
@@ -12,5 +14,24 @@
             Priority="0"
             Text="Nuevo" />
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView
+            behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding MenuItemSelectedCommand}"
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="True"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding Speciality}"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <view:SpecialityItemTemplate />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 
 </ContentPage>

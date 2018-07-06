@@ -70,8 +70,6 @@
             });
         }
 
-        private Task RemoveUserCredentials() => authenticationService.LogoutAsync();
-
         private async void OnSelectMenuItem(MenuItem item)
         {
             if (!item.IsEnabled || item.ViewModelType == null) return;
@@ -79,5 +77,7 @@
             item.AfterNavigationAction?.Invoke();
             await NavigationService.NavigateToAsync(item.ViewModelType, item);
         }
+
+        private Task RemoveUserCredentials() => authenticationService.LogoutAsync();
     }
 }

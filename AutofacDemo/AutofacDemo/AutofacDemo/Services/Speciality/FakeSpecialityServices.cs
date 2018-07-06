@@ -1,4 +1,6 @@
-﻿namespace AutofacDemo.Services.Speciality
+﻿using AutofacDemo.Extensions;
+
+namespace AutofacDemo.Services.Speciality
 {
     using Model;
     using System.Collections.Generic;
@@ -6,7 +8,7 @@
 
     public class FakeSpecialityServices : ISpecialtyServices
     {
-        private static List<SpecialityModel> Specialities = new List<SpecialityModel>
+        private static readonly List<SpecialityModel> Specialities = new List<SpecialityModel>
         {
             new SpecialityModel
             {
@@ -20,9 +22,10 @@
             }
         };
 
-        public async Task<IEnumerable<SpecialityModel>> GetSpecialitiesAsync(string token = "")
+        public async Task<IEnumerable<SpecialityModel>> GetSpecialitiesAsync()
         {
             await Task.Delay(500);
+
             return Specialities;
         }
     }

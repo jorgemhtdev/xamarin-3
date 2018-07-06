@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MapsDemo.Views.MapView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MapsDemo.Controls;assembly=MapsDemo">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <controls:CustomMap
+                x:Name="MyMap"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                HasScrollEnabled="False"
+                HasZoomEnabled="True"
+                IsShowingUser="False"
+                MapType="Street" />
+            <!--  Absolute layouts we have to specify two properties => Layout Bounds and Layout Flags  -->
+            <BoxView
+                AbsoluteLayout.LayoutBounds="0.5,0.1, 250, 120"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="Aquamarine" />
+            <!--  first two properties the position of the element (X, Y relative to parent) and with the last ones the width/height  -->
+            <!--  y => vertical and x => horizontal  -->
+            <BoxView
+                AbsoluteLayout.LayoutBounds="0,1,1,50"
+                AbsoluteLayout.LayoutFlags="YProportional,WidthProportional"
+                Color="Aquamarine" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
