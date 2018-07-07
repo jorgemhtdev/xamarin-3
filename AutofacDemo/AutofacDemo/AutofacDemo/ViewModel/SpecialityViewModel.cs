@@ -15,11 +15,6 @@
 
         private readonly ISpecialtyServices SpecialtyServices;
 
-        public SpecialityViewModel()
-        {
-
-        }
-
         public SpecialityViewModel(ISpecialtyServices SpecialtyServices)
         {
             this.SpecialtyServices = SpecialtyServices;
@@ -52,6 +47,5 @@
                 IsBusy = false;
             }
         }
-
     }
 }

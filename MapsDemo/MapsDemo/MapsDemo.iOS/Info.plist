@@ -21,11 +21,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>10.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>MapsDemo</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.MapsDemo</string>
+	<string>com.jorgemht.MapsDemo</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -34,5 +34,9 @@
 	<string>MapsDemo</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Necesito permisos melon</string>
+	<key>Location When In Use Usage Description</key>
+	<string>Necesito permisos melon</string>
 </dict>
 </plist>

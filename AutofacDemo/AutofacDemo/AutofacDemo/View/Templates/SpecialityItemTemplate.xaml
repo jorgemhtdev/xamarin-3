@@ -9,7 +9,7 @@
                 x:Key="MenuTextStyle"
                 BasedOn="{StaticResource MontserratRegularLabelStyle}"
                 TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource BlueBlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
                 <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label
-                Grid.Column="1"
+                Grid.Column="0"
                 Style="{StaticResource MenuTextStyle}"
                 Text="{Binding Name}" />
         </Grid>

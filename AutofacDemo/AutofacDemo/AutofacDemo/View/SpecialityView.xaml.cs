@@ -1,4 +1,6 @@
-﻿namespace AutofacDemo.View
+﻿using AutofacDemo.ViewModel.Base;
+
+namespace AutofacDemo.View
 {
     using ViewModel;
     using Xamarin.Forms;
@@ -10,9 +12,13 @@
 		public SpecialityView ()
 		{
 			InitializeComponent();
-
-		    BindingContext = new SpecialityViewModel();
-
 		}
+
+	    protected override void OnAppearing()
+	    {
+	        base.OnAppearing();
+
+	        (this.BindingContext as ViewModelBase)?.InitializeAsync(null);
+	    }
 	}
 }

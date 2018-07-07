@@ -127,7 +127,8 @@
 
             Page page = Activator.CreateInstance(pageType) as Page;
             ViewModelBase viewModel = Locator.Instance.Resolve(viewModelType) as ViewModelBase;
-            page.BindingContext = viewModel;
+
+            if(page != null ) page.BindingContext = viewModel;
 
             return page;
         }
