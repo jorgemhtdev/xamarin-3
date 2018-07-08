@@ -143,9 +143,10 @@ namespace MicrochartsDemo
 	            Margin = 15
             };
 
-	        ChartViewThird.Chart = new Microcharts.RadialGaugeChart()
+            ChartViewSixth.Chart = new Microcharts.RadialGaugeChart()
 	        {
-	            Entries = firstSerie,
+	            Entries = secondSerie,
+                StartAngle = 0.5f,
 	            LabelTextSize = 20,
 	            Margin = 15
             };

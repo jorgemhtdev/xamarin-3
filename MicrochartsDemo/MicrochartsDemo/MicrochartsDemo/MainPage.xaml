@@ -14,7 +14,6 @@
             <charts:ChartView
                 x:Name="ChartViewSecond"
                 HeightRequest="300"
-                
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
             <charts:ChartView
@@ -29,6 +28,11 @@
                 VerticalOptions="FillAndExpand" />
             <charts:ChartView
                 x:Name="ChartViewFifth"
+                HeightRequest="300"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+            <charts:ChartView
+                x:Name="ChartViewSixth"
                 HeightRequest="300"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
