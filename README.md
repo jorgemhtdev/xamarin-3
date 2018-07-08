@@ -66,6 +66,7 @@ This project uses some third-party assets with a license that requires attributi
 
 - [MediaManager](https://github.com/martijn00/XamarinMediaManager) : by martijn00, modplug, jmartine2, SimonSimCity, fela98
 bubavanhalen, rookiejava
+- [Microcharts](https://github.com/aloisdeniel/Microcharts) : by Aloïs Deniel
 
 # Clean and Rebuild
 
