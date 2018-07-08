@@ -23,6 +23,15 @@ Rebuild the solution to get all neccesary NuGet packages.
 
 <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo%201.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo%202.gif" width="30%" /> 
 
+Wiht Xamarin Forms 3.1 with a new platform specific you're able to move the Android TabBar to the position you require: Top, Bottom, Default. => https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.1/3.1.0
+
+Example => https://github.com/jorgemht/Xamarin-3.0/tree/master/AndroidTabsDemo
+
+It is recommended to read when using the tabs in the default position or in the bottom position:
+
+- Tabs  => https://material.io/design/components/tabs.html
+- Bottom navigation  => https://material.io/design/components/bottom-navigation.html
+
 ### FFImageLoadingDemo
 
 <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/ffimage.gif" width="30%" /> 
@@ -33,7 +42,19 @@ Rebuild the solution to get all neccesary NuGet packages.
 
 <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSEnglishSimulator.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSEnglish.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSSpanish.gif" width="30%" /> 
 
+### FFImageLoading
+
+ * In progress
+ 
+ ### Microcharts
+
+ * In progress
+
 ### AutofacDemo
+
+ * In progress
+ 
+ ### MapsDemo
 
  * In progress
 
