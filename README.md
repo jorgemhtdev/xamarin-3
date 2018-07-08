@@ -1,6 +1,4 @@
-# Xamarin Forms 3.0 - Samples
-
-
+# Xamarin Forms 3.0 and 3.1 - Samples
 
 ![](https://img.shields.io/teamcity/codebetter/bt428.svg) [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/jorgemht/Xamarin-3.0/blob/master/LICENSE)
 
@@ -13,13 +11,13 @@ All the projects is available for two platforms:
 
 # Setup
 
-Download or clone the repository. This is a solution with two projects.
+Download or clone the repository. 
 
 Rebuild the solution to get all neccesary NuGet packages.
 
 # Screens
 
-### Bottom Navigation Bar
+### Bottom Navigation Bar (XF 3.0)
 
 <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo%201.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/BottomBarDemo%202.gif" width="30%" /> 
 
@@ -42,19 +40,16 @@ It is recommended to read when using the tabs in the default position or in the 
 
 <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSEnglishSimulator.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSEnglish.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MediaDemoiOSSpanish.gif" width="30%" /> 
 
-### FFImageLoading
+ 
+ ### Microcharts (XF 3.1)
+
+<img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MicrochartsiOS.gif" width="30%" /> <img src="https://github.com/jorgemht/Xamarin-3.0/blob/master/Screenshot/MicrochartsAndroid.gif" width="30%" /> 
+
+### Autofac (XF 3.1)
 
  * In progress
  
- ### Microcharts
-
- * In progress
-
-### AutofacDemo
-
- * In progress
- 
- ### MapsDemo
+ ### Maps (XF 3.1)
 
  * In progress
 
@@ -64,6 +59,8 @@ It is recommended to read when using the tabs in the default position or in the 
 # Tools used
 
 * [LiveXAML](http://www.livexaml.com) - Live simulator updates for your XAML code 
+* [Mfractor](https://www.mfractor.com)
+* [Resharper](https://www.jetbrains.com/resharper/)
 
 # Licenses
 
@@ -87,7 +84,22 @@ This project uses some third-party assets with a license that requires attributi
 
 - [MediaManager](https://github.com/martijn00/XamarinMediaManager) : by martijn00, modplug, jmartine2, SimonSimCity, fela98
 bubavanhalen, rookiejava
+
 - [Microcharts](https://github.com/aloisdeniel/Microcharts) : by Aloïs Deniel
+
+# Blogs and videos
+
+- [Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- [Android Guidelines](https://developer.android.com/design/)
+
+# About
+
+The purpose of this repository is to show different funcionalities that can be implemented in Xamarin Forms. To simplify the code and to make it easier to understand some projects, mvvm or some other good practices have not been included. 
+
+Some projects have included MVVM and other good practices to show their implementation in Xamarin Forms.
+
+I always recommend reading the official guides and the links of interest that I add in the examples or in the section of blogs and videos.
 
 # Clean and Rebuild
 
