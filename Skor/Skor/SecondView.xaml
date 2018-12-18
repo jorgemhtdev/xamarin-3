@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Skor.SecondView" xmlns:controls="clr-namespace:Skor.Controls;assembly=Skor.Controls">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="controls:GradientButton">
+                <Setter Property="CornerRadius" Value="24" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="StartColor" Value="#f7323f" />
+                <Setter Property="CenterColor" Value="#d5222e" />
+                <Setter Property="EndColor" Value="#b4121d" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <ContentPage.Content>
+        <StackLayout Padding="32">
+            <controls:GradientButton Text="Back"
+                                     Style="{StaticResource ButtonStyle}"
+                                     Command="{Binding BackCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
