@@ -27,7 +27,7 @@ Example => https://github.com/jorgemht/Xamarin-3.0/tree/master/AndroidTabsDemo
 
 It is recommended to read when using the tabs in the default position or in the bottom position:
 
-- Tabs  => https://material.io/design/components/tabs.html
+- Tabs  => https://material.io/design/components/tabs.html 
 - Bottom navigation  => https://material.io/design/components/bottom-navigation.html
 
 ### FFImageLoadingDemo
